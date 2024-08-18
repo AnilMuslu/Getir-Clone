@@ -84,7 +84,8 @@ fun FirstScreen(){
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceBetween
         ) {
             Image(painter = painterResource(id = R.drawable.promotion),
                 contentDescription = "",
@@ -95,8 +96,9 @@ fun FirstScreen(){
             )
             Row(
                 modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly,
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.Top
             ) {
                 GetirBigCardChip()
@@ -104,8 +106,9 @@ fun FirstScreen(){
             }
             Row(
                 modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly,
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.Top
             ) {
                 GetirBigCardChip()
@@ -113,12 +116,13 @@ fun FirstScreen(){
             }
             Row(
                 modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly,
+                    .fillMaxWidth()
+                    .padding(start = 12.dp, end = 12.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.Top
             ) {
-                GetirBigCardChip()
-                GetirBigCardChip()
+                GetirRectangleCardChip()
+                GetirRectangleCardChip()
             }
         }
     }

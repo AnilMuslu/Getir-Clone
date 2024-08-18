@@ -19,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.getirclone.ui.theme.GetirWhite
 import com.example.getirclone.ui.theme.Purple40
 import com.example.getirclone.ui.theme.Purple80
 import com.example.getirclone.ui.theme.PurpleGrey40
@@ -30,12 +31,11 @@ fun GetirBigCardChip(){
         modifier = Modifier
             .width(180.dp)
             .height(180.dp)
-            .padding(16.dp),
+            .padding(8.dp),
         shape = RoundedCornerShape(16.dp),
-        //colors = CardDefaults.cardColors(containerColor = Purple80),
         border = CardDefaults.outlinedCardBorder()
     ) {
-        Column(Modifier.background(Color.White)) {
+        Column(Modifier.background(GetirWhite)) {
             Image(painter = painterResource(id = R.drawable.getirbigcard), contentDescription = null,
                 modifier = Modifier.fillMaxSize())
         }
