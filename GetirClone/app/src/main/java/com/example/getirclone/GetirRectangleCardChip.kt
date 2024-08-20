@@ -2,6 +2,7 @@ package com.example.getirclone
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -17,12 +18,13 @@ import androidx.compose.ui.unit.dp
 import com.example.getirclone.ui.theme.GetirWhite
 
 @Composable
-fun GetirRectangleCardChip(){
+fun GetirRectangleCardChip(onClick: () -> Unit){
     Card(
         modifier = Modifier
             .width(180.dp)
             .height(90.dp)
-            .padding(8.dp),
+            .padding(8.dp)
+            .clickable { onClick() },
         shape = RoundedCornerShape(16.dp),
         border = CardDefaults.outlinedCardBorder()
     ) {
